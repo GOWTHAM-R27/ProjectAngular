@@ -1,0 +1,217 @@
+h1{
+  position: fixed;
+  margin-top: 10px;
+  color: #fff724;
+}
+span{
+  color: skyblue;
+}
+
+.nav{
+  position: fixed;
+  width: 100%;
+  background-color: rgb(48, 47, 47);
+  padding: 20px;
+  align-items:center;
+  justify-content:right;
+  text-align: right;
+  margin: 0 auto;
+
+
+}
+.nav a{
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  text-decoration: none;
+  color: #fff724;
+  font-size: large;
+}
+.nav a:hover{
+  background-color: #fff724;
+  color: black;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+
+.p1 {
+  color: #fff724;
+  padding: 10px 50px;
+  font-size: large;
+}
+
+.p1:hover {
+  color: black;
+  cursor: pointer;
+  background-color: #fff724;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: -7px;
+  top: 27px;
+  background-color: #f9f9f9;
+  color: black;
+  width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  text-align: center;
+}
+
+.dropdown-content p {
+  padding: 5px 5px;
+}
+
+#sam {
+  text-align: left;
+  text-decoration: none;
+  color: black;
+}
+
+#sam:hover {
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: grey;
+}
+aside {
+  position: fixed;
+  top: 60px;
+  background-color: rgb(29, 29, 29);
+  width: max-content;
+  height: 100%;
+  padding: 10px 20px;
+}
+
+aside .content {
+  margin-top: 30px;
+
+}
+
+aside .content li {
+  padding: 20px 10px;
+  cursor: pointer;
+}
+.container{
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.container{
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 10px 20px 25px rgba(0,0,0,0.5);
+  overflow: hidden;
+ max-width: 100%;
+ width: max-content;
+ justify-content: center;
+ margin: 100px 350px;
+
+}
+.header{
+  border-bottom: 2px solid white;
+  background-color: skyblue;
+  padding: 20px 40px;
+}
+.header h2{
+  margin: 0;
+  text-align: center;
+}
+.form{
+  background-color: rgb(185, 183, 183);
+  padding: 20px 40px;
+}
+.form-control{
+  margin-bottom: 10px;
+  padding-bottom:20px ;
+  position: relative;
+}
+.form-control input{
+  display: block;
+  border: 2px solid rgb(52, 161, 194);
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 5px;
+  width: 100%;
+}
+.form-control input:focus{
+  outline: none;
+  border: 2px solid blue;
+}
+.form-control textarea{
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 5px;
+  border: 2px solid rgb(52, 161, 194);
+}
+.form-control textarea:focus{
+  outline: none;
+  border: 2px solid blue;
+
+}
+.form-control .select{
+  border-radius: 4px;
+  border: 2px solid rgb(52, 161, 194);
+  padding: 3px;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+.form-control .select:focus{
+  outline: none;
+  border: 2px solid blue;
+
+}
+/* .form-control label{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+*/
+.table{
+  border-spacing: 20px 30px;
+}
+.form button{
+  background-color: black;
+  border: none;
+  color: white;
+  display: block;
+  font-size: 16px;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.error{
+  color: red;
+}
+.packages{
+  justify-content: center;
+ margin: 100px 500px;
+}
+.pack{
+  text-align: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.packTr{
+  border-bottom: 2px solid black;
+  padding: 10px;
+}
+.packTd{
+  border-bottom: 2px solid black;
+  padding: 10px;
+}

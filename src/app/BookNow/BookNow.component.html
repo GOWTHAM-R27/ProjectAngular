@@ -1,0 +1,180 @@
+<header>
+
+  <nav class="nav">
+    <a routerLink="/index"><i class='fa fa-home'></i>&nbsp;&nbsp;Home</a>
+    <a routerLink="/gallery"><i class='fa fa-leaf'></i>&nbsp;&nbsp;Gallery</a>
+    <div class="dropdown">
+      <span class="p1"><i class="fa fa-fire"></i>&nbsp;&nbsp;Services</span>
+      <div class="dropdown-content">
+          <p>
+              <a routerLink="/pre_wedding" id="sam">Pre wedding</a>
+          </p>
+          <p>
+              <a routerLink="/wedding" id="sam">Wedding</a>
+          </p>
+          <p>
+              <a routerLink="/portrait" id="sam">Portrait</a>
+          </p>
+          <p>
+              <a routerLink="events" id="sam">Events</a>
+          </p>
+          <p>
+              <a routerLink="/products" id="sam">Products</a>
+          </p>
+          <p>
+              <a routerLink="/travel" id="sam">Travel</a>
+          </p>
+      </div>
+  </div>
+    <a routerLink="/"><i class='fa fa-sign-out'></i>&nbsp;&nbsp;Log out</a>
+    <!-- <a routerLink="register">Register</a> -->
+  </nav>
+  <h1><img src="/assets/img/logo.png" style="height:30px; width:30px;">Hina <span class="studio">Studios</span></h1>
+</header>
+<div class="packages">
+  <table class="pack">
+      <tr>
+          <th colspan="3" class="packTr">Packages</th>
+      </tr>
+      <tr>
+          <td class="packTd">Pre wedding</td>
+          <td class="packTd">Photo - 5000 per day</td>
+          <td class="packTd">Video - 6000 per day</td>
+      </tr>
+      <tr>
+          <td class="packTd">Wedding</td>
+          <td class="packTd">Photo - 10000(3 days)</td>
+          <td class="packTd">Video - 18000(3 days)</td>
+      </tr>
+      <tr>
+          <td class="packTd">Portrait</td>
+          <td class="packTd">Photo - 5000 per day</td>
+          <td class="packTd">Video - 5000 per day</td>
+      </tr>
+      <tr>
+          <td class="packTd">Events</td>
+          <td class="packTd">Photo - 7000 per day </td>
+          <td class="packTd">Video - 13000 per day</td>
+      </tr>
+      <tr>
+          <td class="packTd">Products</td>
+          <td class="packTd">Photo - 4000 per day </td>
+          <td class="packTd">Video - 7000 per day</td>
+      </tr>
+      <tr>
+          <td class="packTd">Travel</td>
+          <td class="packTd">Photo - 7000 per day</td>
+          <td class="packTd">Video - 12000 per day</td>
+      </tr>
+
+  </table>
+</div>
+<div class="container">
+  <div class="header">
+      <h2>Book now</h2>
+  </div>
+  <form class="form" (submit)="bookForm()" [formGroup]="bookForm1">
+      <div class="form-control">
+          <table class="table">
+              <tr>
+                  <td><label >First Name:</label></td>
+                  <td><input type="text" placeholder="Enter your name" name="firstName"  [(ngModel)]="firstName" formControlName="firstName" required>
+                    <div class="error" *ngIf="bookForm1.controls['firstName'].invalid&&bookForm1.controls['firstName'].touched">
+                      <small *ngIf="bookForm1.controls['firstName'].errors?.['required']">Please Enter firstName</small>
+
+                    </div>
+                  </td>
+                  <td><label >Last Name:</label></td>
+                  <td><input type="text" placeholder="Enter your name" name="lastName"  [(ngModel)]="lastName" formControlName="lastName" required>
+                    <div class="error" *ngIf="bookForm1.controls['lastName'].invalid&&bookForm1.controls['lastName'].touched">
+                      <small *ngIf="bookForm1.controls['lastName'].errors?.['required']">Please Enter lastName</small>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td><label >Mobile no:</label></td>
+                  <td><input type="text" placeholder="Enter your mobile number" name="mobileno1"  [(ngModel)]="mobileno1" formControlName="mobileno1" required>
+                    <div class="error" *ngIf="bookForm1.controls['mobileno1'].invalid&&bookForm1.controls['mobileno1'].dirty">
+                      <small *ngIf="bookForm1.controls['mobileno1'].errors?.['required']">Please Enter your mobile no</small>
+                      <small *ngIf="bookForm1.controls['mobileno1'].errors?.['pattern']">Please Enter correct mobile no</small>
+                    </div>
+                  </td>
+                  <td><label >Alter Mobile no:</label></td>
+                  <td><input type="text" placeholder="Enter your mobile number" name="mobileno2"  [(ngModel)]="mobileno2" formControlName="mobileno2" required>
+                    <div class="error" *ngIf="bookForm1.controls['mobileno2'].invalid&&bookForm1.controls['mobileno2'].dirty">
+                      <small *ngIf="bookForm1.controls['mobileno2'].errors?.['required']">Please Enter your mobile no</small>
+                      <small *ngIf="bookForm1.controls['mobileno2'].errors?.['pattern']">Please Enter correct mobile no</small>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td><label>Email id:</label></td>
+                  <td><input type="email" placeholder="Enter your email id" name="email"  [(ngModel)]="email" formControlName="email" required>
+                    <div class="error" *ngIf="bookForm1.controls['email'].invalid&&bookForm1.controls['email'].dirty">
+                      <small *ngIf="bookForm1.controls['email'].errors?.['required']">Please Enter email</small>
+                      <small *ngIf="bookForm1.controls['email'].errors?.['pattern']">Please enter correct email</small>
+                    </div>
+                  </td>
+                  <td><label>Date & Time:</label></td>
+                  <td><input type="datetime-local" placeholder="select date and time" name="date"  [(ngModel)]="date" formControlName="date" required>
+                    <div class="error" *ngIf="bookForm1.controls['date'].invalid&&bookForm1.controls['date'].touched">
+                      <small *ngIf="bookForm1.controls['date'].errors?.['required']">Please select the date & time</small>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td><label>Permanent address:</label></td>
+                  <td><textarea rows="4" cols="22" placeholder="Enter your address" name="pAddress"  [(ngModel)]="pAddress" formControlName="pAddress" required></textarea>
+                  <br>
+                  <div class="error" *ngIf="bookForm1.controls['pAddress'].invalid&&bookForm1.controls['pAddress'].touched">
+                    <small *ngIf="bookForm1.controls['pAddress'].errors?.['required']">Please Fill this field</small>
+                  </div>
+                  </td>
+                  <td><label>Event place address:</label></td>
+                  <td><textarea rows="4" cols="22" placeholder="Enter your address" name="eAddress"  [(ngModel)]="eAddress" formControlName="eAddress" required></textarea>
+                  <br>
+                  <div class="error" *ngIf="bookForm1.controls['eAddress'].invalid&&bookForm1.controls['eAddress'].touched">
+                    <small *ngIf="bookForm1.controls['eAddress'].errors?.['required']">Please Fill this field</small>
+                  </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td><label>Category:</label></td>
+                  <td><select class="select" id="categories" name="service"  [(ngModel)]="service" formControlName="service" required>
+                      <option value="">--Select the Category--</option>
+                      <option value="Pre wedding">Pre wedding</option>
+                      <option value="Wedding">Wedding</option>
+                      <option value="Portrait">Portrait</option>
+                      <option value="Events">Event</option>
+                      <option value="Products">Products</option>
+                      <option value="Travel">Travel</option>
+                  </select><br>
+                  <div class="error" *ngIf="bookForm1.controls['service'].invalid&&bookForm1.controls['service'].touched">
+                    <small *ngIf="bookForm1.controls['service'].errors?.['required']">Please Select The Service</small>
+                  </div>
+                  </td>
+                  <td><label>Days:</label></td>
+                  <td><select class="select" id="day" name="days"  [(ngModel)]="days" formControlName="days" required>
+                      <option value="">--Select the days--</option>
+                      <option value="one">1 Day</option>
+                      <option value="Wedding">2 Days</option>
+                      <option value="Portrait">More than 2 days</option>
+                  </select><br>
+                  <div class="error" *ngIf="bookForm1.controls['days'].invalid&&bookForm1.controls['days'].touched">
+                    <small *ngIf="bookForm1.controls['days'].errors?.['required']">Please Select The Days</small>
+                  </div>
+                  </td>
+              </tr>
+          </table>
+      </div>
+      <button [disabled]="!bookForm1.valid">Submit</button>
+
+  </form>
+
+</div>
+<aside >
+  <ul class="content" type="none">
+    <li><i class="fa fa-user-circle" style="color: white;"></i><a href="/profile" style="text-decoration: none; color: white;">&nbsp;&nbsp;Profile</a></li>
+    <li><i class="fa fa-arrow-circle-right" style="color: white;"></i><a href="/booknow" style="text-decoration: none; color: white;">&nbsp;&nbsp;Book now</a></li>
+</ul>
+</aside>

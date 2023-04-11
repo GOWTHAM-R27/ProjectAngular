@@ -1,0 +1,62 @@
+<header>
+
+  <nav class="nav">
+    <a routerLink="/"><i class='fa fa-home'></i>&nbsp;&nbsp;Home</a>
+    <a routerLink="/gallery"><i class='fa fa-leaf'></i>&nbsp;&nbsp;Gallery</a>
+    <div class="dropdown">
+      <span class="p1"><i class="fa fa-fire"></i>&nbsp;&nbsp;Services</span>
+      <div class="dropdown-content">
+          <p>
+              <a routerLink="/pre_wedding" id="sam">Pre wedding</a>
+          </p>
+          <p>
+              <a routerLink="/wedding" id="sam">Wedding</a>
+          </p>
+          <p>
+              <a routerLink="/portrait" id="sam">Portrait</a>
+          </p>
+          <p>
+              <a routerLink="/events" id="sam">Events</a>
+          </p>
+          <p>
+              <a routerLink="/products" id="sam">Products</a>
+          </p>
+          <p>
+              <a routerLink="/travel" id="sam">Travel</a>
+          </p>
+      </div>
+  </div>
+    <!-- <a routerLink="/"><i class='fa fa-sign-out'></i>&nbsp;&nbsp;Log t</a> -->
+    <!-- <a routerLink="register">Register</a> -->
+  </nav>
+  <h1><img src="/assets/img/logo.png" style="height:30px; width:30px;">Hina <span class="studio">Studios</span></h1>
+</header>
+<div class="container">
+  <div class="header">
+      <h2>Login</h2>
+
+  </div>
+  <form class="form" [formGroup]="loginForm2" (ngSubmit)="login3()" >
+      <div class="form-control">
+      <!--Email-->
+          <i class="fa fa-envelope"></i>&nbsp;&nbsp;<label for="Email">Email id</label>:<br>
+          <input type="email" placeholder="Enter your registered email id" [(ngModel)]= "email" formControlName="email" required>
+          <div class="error" *ngIf="loginForm2.controls['email'].invalid&&loginForm2.controls['email'].touched">
+            <small *ngIf="loginForm2.controls['email'].errors?.['required']">Please Enter email</small>
+          </div>
+
+      <!--Password-->
+          <i class="fa fa-lock"></i>&nbsp;&nbsp;<label for="Password">Password</label>:<br>
+          <input type="password" placeholder="Enter your password" [(ngModel)]= "password" formControlName="password" required>
+          <div class="error" *ngIf="loginForm2.controls['password'].invalid&&loginForm2.controls['password'].touched">
+            <small *ngIf="loginForm2.controls['password'].errors?.['required']">Please Enter Password</small>
+          </div>
+          <a routerLink="/cp" class="fp" style="color: black;">Forgot password?</a>
+      </div>
+      <button [disabled]="!loginForm2.valid" (click)="onLogin()">Login</button>
+  </form>
+  <div class="header1">
+      <p>Don't have an account? <a href="/register" style="text-decoration:none ;">Create new account</a></p>
+  </div>
+
+</div>

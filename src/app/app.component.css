@@ -1,0 +1,14 @@
+
+body{
+  background-image: url('/assets/img/Frame.png');
+  /* width: 100%; */
+  /* margin-top: -10px;
+  margin-left: -10px; */
+  /* height: 45rem; */
+  background-size: cover;
+ background-repeat: no-repeat;
+ background-position: 50% 50%;
+}
+*{
+  font-family: sans-serif;
+}
