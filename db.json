@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "username": "GOWTHAM27",
+      "mobileno": "9944962896",
+      "email": "2k19cse027@kiot.ac.in",
+      "password": "Maddy@27r",
+      "confirmpass": "Maddy@27r",
+      "id": 1
+    },
+    {
+      "username": "badri11",
+      "mobileno": "8877665544",
+      "email": "2k19cse011@kiot.ac.in",
+      "password": "123@qwe",
+      "confirmpass": "123@qwe",
+      "id": 2
+    },
+    {
+      "username": "GOWTHAM27",
+      "mobileno": "9944962896",
+      "email": "2k19cse027@kiot.ac.in",
+      "password": "123@qwe",
+      "confirmpass": "123@qwe",
+      "id": 3
+    }
+  ],
+  "Booking": [
+    {
+      "firstName": "gowtham",
+      "lastName": "r",
+      "mobileno1": "9988776655",
+      "mobileno2": "9988777664",
+      "email": "2k19cse027@kiot.ac.in",
+      "date": "2023-04-09T17:35",
+      "pAddress": "werthdhfjmbvcsfavb",
+      "eAddress": "dsfgbhnmj,k.ghfdczx",
+      "service": "Travel",
+      "days": "Wedding",
+      "id": 1
+    }
+  ]
+}
